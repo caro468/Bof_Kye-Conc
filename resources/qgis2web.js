@@ -85,8 +85,10 @@ var map = new ol.Map({
     })
 });
 
+var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
+map.addControl(layerSwitcher);
 
-map.getView().fit([-246852.151227, 731099.550252, -197839.583444, 753095.315410], map.getSize());
+map.getView().fit([-263684.539054, 715472.561044, -165659.403488, 760772.198868], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
@@ -736,6 +738,17 @@ if (elementToMove && parentElement) {
 }
 
 
+
+var geocoder = new Geocoder('nominatim', {
+  provider: 'osm',
+  lang: 'en-US',
+  placeholder: 'Search for ...',
+  limit: 5,
+  keepOpen: true
+});
+map.addControl(geocoder);
+
+document.getElementsByClassName('gcd-gl-btn')[0].className += ' fa fa-search';
 
 var attributionComplete = false;
 map.on("rendercomplete", function(evt) {

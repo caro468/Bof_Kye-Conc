@@ -3,7 +3,7 @@ var placement = 'point';
 function categories_Contours_4(feature, value, size, resolution, labelText,
                        labelFont, labelFill, bufferColor, bufferWidth,
                        placement) {
-                switch(value.toString()) {case '[600, 650, 700, 800, 850, 1050, 900, 950]':
+                switch(value.toString()) {case '[\'600\', \'650\', \'700\', \'800\', \'850\', \'1050\', \'900\', \'950\']':
                     return [ new ol.style.Style({
         stroke: new ol.style.Stroke({color: 'rgba(181,123,70,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.9}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
@@ -11,7 +11,7 @@ function categories_Contours_4(feature, value, size, resolution, labelText,
                               bufferWidth)
     })];
                     break;
-case '[1000, 750]':
+case '[\'1000\', \'750\']':
                     return [ new ol.style.Style({
         stroke: new ol.style.Stroke({color: 'rgba(181,123,70,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 3.8}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
